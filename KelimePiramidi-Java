@@ -1,0 +1,23 @@
+import java.util.Scanner;
+public class Test {
+    public static void main(String[] args) {
+        Scanner scan=new Scanner(System.in);
+        int value;
+        do{
+            System.out.println("Please enter a uppercase letter: ");
+            char word=scan.nextLine().charAt(0);
+            value=Integer.valueOf(word);
+        }
+        while(value>91||value<65);
+        for (int i = 65; i <=value ; i++) {
+            for (int j = 65; j <i ; j++) {
+                System.out.print((char)j);
+            }
+            for (int j = i; j >=65 ; j--) {
+                System.out.print((char)j);
+            }
+            System.out.println();
+
+        }
+    }
+}
